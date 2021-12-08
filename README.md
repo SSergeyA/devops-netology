@@ -24,3 +24,4 @@ override.tf.json  <br>
 .terraformrc <br>
 игнорируются файлы terraform.rc<br>
 terraform.rc <br>
+fix string
