@@ -1,5 +1,21 @@
 # Sergey Sokolov
-1. node-exporter![image](https://user-images.githubusercontent.com/93119897/151541100-57c45a1e-469a-4027-acab-a349e5de923d.png)
+1. 
+[Unit]</br>
+Description=Node Exporter</br>
+After=network-online.target</br>
+
+[Service]</br>
+User=node_exporter</br>
+Group=node_exporter</br>
+Type=simple</br>
+EnviromentFile=/etc/default/node_exporter</br>
+ExecStart=/usr/local/bin/node_exporter $start_opt</br>
+
+[Install]</br>
+WantedBy=multi-user.target</br>
+
+
+node-exporter![image](https://user-images.githubusercontent.com/93119897/151541100-57c45a1e-469a-4027-acab-a349e5de923d.png)
  </br>
  2. По CPU </br>
 node_cpu_seconds_total{cpu="0",mode="idle"} 16051.68</br>
