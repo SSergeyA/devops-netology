@@ -8,7 +8,7 @@ After=network-online.target</br>
 User=node_exporter</br>
 Group=node_exporter</br>
 Type=simple</br>
-EnviromentFile=/etc/default/node_exporter</br>
+EnvironmentFile=/etc/default/node_exporter</br>
 ExecStart=/usr/local/bin/node_exporter $start_opt</br>
 
 [Install]</br>
