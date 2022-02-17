@@ -28,4 +28,20 @@ Connection closed by foreign host.
 дольше всего обрабатывалось получение данных со страницы stackoverflow.com</br>
 ![image](https://user-images.githubusercontent.com/93119897/154497570-b36864b8-c00b-4eae-98f8-4157bcbae023.png)</br>
 
+3.   176.59.168.112
+4.  descr:          Tele2 Russia Groups, origin: AS12958, </br>
+5.  AS31500 AS15169![image](https://user-images.githubusercontent.com/93119897/154510200-6b7b8587-e9f3-4c63-9ecc-c9bd248bc1d8.png)  </br>
+6. Наибольшее время задержки 131 ms на ip 172.14.232.85 </br>
+ не совсем понятно почему в середине списка, у некоторых AS появилось, а AS31500 стала недоступна (по сравнению с traceroute) </br> ![image](https://user-images.githubusercontent.com/93119897/154511306-c53c4028-a7b1-44fb-8ac7-e6af657ee8a7.png)  </br>
  
+7.</br>DNS сервера</br>
+![image](https://user-images.githubusercontent.com/93119897/154516110-c6811e15-5289-4a61-be1c-034ed41de94a.png)</br>
+А записи </br>
+![image](https://user-images.githubusercontent.com/93119897/154516244-ee34bad3-9751-4f3e-a7a0-a98ac8b98976.png)</br>
+
+8.
+Доменное имя dns.google. У второго адреса тоже имя</br>
+![image](https://user-images.githubusercontent.com/93119897/154517155-04dd0b03-7cb8-4060-9cda-ba5ad5a17b1b.png)
+
+
+
