@@ -10,5 +10,8 @@
 ![image](https://user-images.githubusercontent.com/93119897/155121827-e6ed84ae-9940-490b-85af-b0cf18370d0d.png)</br> 
 4.
 53 это  DNS протокол , использует dns-клиент. 68 это dhcp. 
-![image](https://user-images.githubusercontent.com/93119897/155124114-b29f7cd4-14c6-4eef-a42c-f6c20b086e13.png)
+![image](https://user-images.githubusercontent.com/93119897/155124114-b29f7cd4-14c6-4eef-a42c-f6c20b086e13.png)</br> 
+
+5. 
+![image](https://user-images.githubusercontent.com/93119897/155127738-97642e71-13cb-4cc0-8065-37c6b133fe34.png)
 
