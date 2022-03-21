@@ -37,12 +37,26 @@ for result in result_os.split('\n'):
 
 ### Ваш скрипт:
 ```python
-???
+#!/usr/bin/env python3
+
+import os
+
+bash_command = ["cd ~/devops-netology", "git status"]
+result_os = os.popen(' && '.join(bash_command)).read()
+#print (result_os)
+is_change = False
+for result in result_os.split('\n'):
+    if result.find('modified') != -1:
+        prepare_result = result.replace('\tmodified:   ', '')
+        print(bash_command[0].replace('cd ',''),prepare_result, sep='/')
 ```
 
 ### Вывод скрипта при запуске при тестировании:
 ```
-???
+sergey@sergey-ThinkPad-X201:~/devops-netology$ ./p1.py
+~/devops-netology/README.md
+~/devops-netology/branching/merge.sh
+sergey@sergey-ThinkPad-X201:~/devops-netology$
 ```
 
 ## Обязательная задача 3
