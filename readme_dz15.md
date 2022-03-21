@@ -43,7 +43,6 @@ import os
 import pathlib
 bash_command = ["cd ~/devops-netology", "git status"]
 result_os = os.popen(' && '.join(bash_command)).read()
-is_change = False
 for result in result_os.split('\n'):
     if result.find('modified') != -1:
         prepare_result = result.replace('\tmodified:   ', '')
@@ -63,12 +62,41 @@ sergey@sergey-ThinkPad-X201:~/devops-netology$
 
 ### Ваш скрипт:
 ```python
-???
+#!/usr/bin/env python3
+
+import os
+import sys
+
+
+if len(sys.argv) > 1:
+    x = sys.argv[1]
+else: 
+    x = os.getcwd()
+print ("Проверяемая директория:",x)
+bash_command = ["cd "+ x, "git status 2>&1" , ]
+result_os = os.popen(' && '.join(bash_command)).read()
+for result in result_os.split('\n'):
+    if result.find('modified') != -1:
+        prepare_result = result.replace('\tmodified:   ', '')
+        print(x,prepare_result, sep='/')
+    if result.find('fatal') != -1:
+        print ('Директория не является локальным репозиторием')
 ```
 
 ### Вывод скрипта при запуске при тестировании:
 ```
-???
+sergey@sergey-ThinkPad-X201:~/devops-netology$ ./p1.py
+Проверяемая директория: /home/sergey/devops-netology
+/home/sergey/devops-netology/README.md
+/home/sergey/devops-netology/branching/merge.sh
+sergey@sergey-ThinkPad-X201:~/devops-netology$ ./p1.py ~/test
+Проверяемая директория: /home/sergey/test
+Директория не является локальным репозиторием
+sergey@sergey-ThinkPad-X201:~/devops-netology$ ./p1.py ~/devops-netology
+Проверяемая директория: /home/sergey/devops-netology
+/home/sergey/devops-netology/README.md
+/home/sergey/devops-netology/branching/merge.sh
+sergey@sergey-ThinkPad-X201:~/devops-netology$ 
 ```
 
 ## Обязательная задача 4
