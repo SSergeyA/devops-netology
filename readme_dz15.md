@@ -104,10 +104,32 @@ sergey@sergey-ThinkPad-X201:~/devops-netology$
 
 ### Ваш скрипт:
 ```python
-???
+#!/usr/bin/env python3
+
+import time
+import socket
+
+iptable = {}
+a=1
+
+hostname = ['drive.google.com', 'mail.google.com', 'google.com']
+for host in hostname:
+ iptable[host] = socket.gethostbyname(host)
+ print ( host, '-',  iptable[host])
+while a != 0:
+    for host in hostname:
+        if iptable[host] != socket.gethostbyname(host):
+             print ('[ERROR]', host ,'IP mismatch:', iptable[host] , socket.gethostbyname(host))
+             iptable[host] = socket.gethostbyname(host)
+        time.sleep(5)
 ```
 
 ### Вывод скрипта при запуске при тестировании:
 ```
-???
+sergey@sergey-ThinkPad-X201:~/devops-netology$ ./4.py
+drive.google.com - 64.233.165.194
+mail.google.com - 173.194.222.18
+google.com - 64.233.162.139
+[ERROR] mail.google.com IP mismatch: 173.194.222.18 64.233.165.83
+[ERROR] drive.google.com IP mismatch: 64.233.165.194 64.233.162.194
 ```
