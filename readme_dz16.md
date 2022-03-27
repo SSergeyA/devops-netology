@@ -44,20 +44,64 @@
 
 ### Ваш скрипт:
 ```python
-???
+!/usr/bin/env python3
+
+
+import time
+import socket
+import json
+import yaml
+
+iptable = {}
+a=1
+
+hostname = ['drive.google.com', 'mail.google.com', 'google.com']
+for host in hostname:
+ iptable[host] = socket.gethostbyname(host)
+ print ( host, '-',  iptable[host])
+print (iptable)
+with open("data.json", "w") as js_file:
+    json.dump(iptable, js_file, indent=2)
+with open("data.yaml", "w") as ym_file:
+    ym_file.write(yaml.dump( iptable, indent=2,explicit_start=True, explicit_end=True))
+while a != 0:
+    for host in hostname:
+        if iptable[host] != socket.gethostbyname(host):
+             print ('[ERROR]', host ,'IP mismatch:', iptable[host] , socket.gethostbyname(host))
+             iptable[host] = socket.gethostbyname(host)
+             with open("data.json", "w") as js_file:
+                json.dump(iptable, js_file, indent=2)
+             with open("data.yaml", "w") as ym_file:
+                ym_file.write(yaml.dump( iptable, indent=2,explicit_start=True, explicit_end=True))
+        time.sleep(5)
 ```
 
 ### Вывод скрипта при запуске при тестировании:
 ```
-???
+sergey@sergey-ThinkPad-X201:~/devops-netology$ ./pingjson.py
+drive.google.com - 64.233.165.113
+mail.google.com - 64.233.163.17
+google.com - 64.233.161.100
+{'drive.google.com': '64.233.165.113', 'mail.google.com': '64.233.163.17', 'google.com': '64.233.161.100'}
+[ERROR] drive.google.com IP mismatch: 64.233.165.113 64.233.165.139
+[ERROR] google.com IP mismatch: 64.233.161.100 64.233.161.138
 ```
 
 ### json-файл(ы), который(е) записал ваш скрипт:
 ```json
-???
+{
+  "drive.google.com": "64.233.165.139",
+  "mail.google.com": "64.233.163.17",
+  "google.com": "64.233.161.138"
+}
 ```
 
 ### yml-файл(ы), который(е) записал ваш скрипт:
 ```yaml
-???
+---
+drive.google.com: 64.233.165.139
+google.com: 64.233.161.138
+mail.google.com: 64.233.163.17
+...
+
 ```
