@@ -1,4 +1,5 @@
 ## Sergey Sokolov
 ### Задание 1
-![image](https://user-images.githubusercontent.com/93119897/168289116-9a8a659a-c1e3-4c0b-a3ae-18f06fafbc2c.png)
+![image](https://user-images.githubusercontent.com/93119897/168298988-1a17ee31-ecd3-4dc2-857a-22defbb961da.png)
+
 ### Задание 2
