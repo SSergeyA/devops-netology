@@ -8,3 +8,6 @@
 ### Задача3
 ![image](https://user-images.githubusercontent.com/93119897/171636970-f0faa669-c58a-4a68-b0cd-b35c64d76f5f.png)
 ![image](https://user-images.githubusercontent.com/93119897/171638758-aba9ab48-85f9-4a11-8845-9ace2f2610bc.png)
+### Задача4
+'innodb_flush_log_at_trx_commit = 2 ' как я понял этот параметр можно задать и 0 , но тогда возрастает риск потери данных
+![image](https://user-images.githubusercontent.com/93119897/171645130-007e0ec9-b7c9-4bd7-b1d5-6947d79f8e47.png)
