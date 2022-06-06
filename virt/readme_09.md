@@ -22,7 +22,7 @@
 
 ## Задание3
 Переименовал таблицу заказов, создал новую пустую, потом создал две для заказов больше и меньше 499 и правила их заполнения, 
-наполнил значениями из переименованной таблицы и удалил ее. Исключить ручное разбивание таблиц нужно было еще на этапе проектирования базы. Это правильней и проще.
+наполнил значениями из переименованной таблицы и удалил ее. Исключить ручное разбивание таблиц нужно было еще на этапе проектирования базы. Это правильней и проще.</br>
 ![image](https://user-images.githubusercontent.com/93119897/172229528-d9d0ceeb-664c-42fe-81de-c5b0d28c56bf.png)
 
 ![image](https://user-images.githubusercontent.com/93119897/172229627-59aea793-7bc6-4722-8ae7-70e5bca150f3.png)
@@ -33,7 +33,7 @@
 ## Задание4
 ![image](https://user-images.githubusercontent.com/93119897/172232569-d8bd396b-508e-4d68-baa1-e85d1326e524.png)
 
-для создания уникальных индексов в бекап добавить `CREATE UNIQUE INDEX name ON table (column [, ...]);`
-CREATE unique INDEX title ON orders (title);
-CREATE unique INDEX title ON orders_1 (title);
-CREATE unique INDEX title ON orders_2 (title);
+для создания уникальных индексов в бекап добавить `CREATE UNIQUE INDEX name ON table (column [, ...]);`</br>
+CREATE unique INDEX title ON orders (title);</br>
+CREATE unique INDEX title ON orders_1 (title);</br>
+CREATE unique INDEX title ON orders_2 (title);</br>
