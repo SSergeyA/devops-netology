@@ -27,3 +27,8 @@
      Если в новых инструментах есть необходимость или они лучше по функционалу . чем использующиеся то да.
  
 ### Задача 2
+
+![image](https://user-images.githubusercontent.com/93119897/175525534-67f036d5-9177-4ba9-9d6a-1efa539a41f8.png)
+
+### Задача 3
+![image](https://user-images.githubusercontent.com/93119897/175525630-02bdb663-0930-485a-9544-87f871ce9b8f.png)
