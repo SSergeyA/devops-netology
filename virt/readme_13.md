@@ -15,5 +15,5 @@ compute-default-zone: ru-central1-a
 ![image](https://user-images.githubusercontent.com/93119897/176452572-ec53db8d-f6a4-49d6-9207-44d7b15d1726.png)
 ![image](https://user-images.githubusercontent.com/93119897/176452637-dc780eac-70ea-41a3-a4c0-26f666a6310c.png)
 ![image](https://user-images.githubusercontent.com/93119897/176452696-c220a408-b9f6-4a1a-9f01-fc06ea03f542.png)
-[main.tf](https://github.com/SSergeyA/devops-netology/blob/main/virt/main.tf)
+[main.tf](https://github.com/SSergeyA/devops-netology/blob/main/virt/main.tf) </br>
 [versions.tf](https://github.com/SSergeyA/devops-netology/blob/main/virt/versions.tf)
