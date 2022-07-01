@@ -24,4 +24,13 @@ secret: YCPz               o_3wmj
 [main.tf](https://github.com/SSergeyA/devops-netology/blob/main/virt/14/main%20(copy).tf) </br>
 [s3.tf](https://github.com/SSergeyA/devops-netology/blob/main/virt/14/s3.tf)</br>
 Вывод terraform plan очень длинный , я сохранил его в файл, вместо скриншотов [terraform plan](https://github.com/SSergeyA/devops-netology/blob/main/terraform.plan) </br>
+Вывод terraform apply
+![image](https://user-images.githubusercontent.com/93119897/176892840-38d05e38-ed2f-4487-b4b3-8b646808c07c.png)</br>
+Проверил в консоли яндекс облака
+![image](https://user-images.githubusercontent.com/93119897/176892987-29959182-50c2-426e-87f3-98fe3c53950c.png)
+![image](https://user-images.githubusercontent.com/93119897/176893063-a23237c4-9ca8-49d9-8778-2d7e1cb136d2.png)
+![image](https://user-images.githubusercontent.com/93119897/176893160-9b403420-f814-437b-9fb6-90ccba95686e.png)
+![image](https://user-images.githubusercontent.com/93119897/176893227-d2db724e-9e7b-4a03-8c08-b1343e03ebfc.png)
+
+
 
