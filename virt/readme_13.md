@@ -10,7 +10,8 @@ folder-id: b1gump4iofj1llimbreg
 compute-default-zone: ru-central1-a
 ```
 ## Задача 2
-
+Ответ на вопрос: при помощи какого инструмента (из разобранных на прошлом занятии) можно создать свой образ ami? 
+При помощи Packer.
 
 ![image](https://user-images.githubusercontent.com/93119897/176452572-ec53db8d-f6a4-49d6-9207-44d7b15d1726.png)
 ![image](https://user-images.githubusercontent.com/93119897/176452637-dc780eac-70ea-41a3-a4c0-26f666a6310c.png)
