@@ -44,4 +44,22 @@ package main
         }    
 ```
 ![image](https://user-images.githubusercontent.com/93119897/181045375-336a093b-fc3b-41ab-b8e3-007c8a26371f.png)
+3.
+```
+package main
+        
+        import "fmt"
+        
+        
+        
+           func main() { 
+            for i := 1; i <=100; i++{
+                    
+                if (i%3) == 0 {
+                    fmt.Print(i,", ")
+                    }
+                }
+        }
+```
+![image](https://user-images.githubusercontent.com/93119897/181048558-ad88a321-8c57-4004-b2c7-14091986e892.png)
 
