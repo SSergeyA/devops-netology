@@ -21,11 +21,11 @@
   - Менее гибкая настройка отправки пакетов данных с метриками. 
 
   #### 2. Какие из ниже перечисленных систем относятся к push модели, а какие к pull? А может есть гибридные?
-        Prometheus - Pull ( у него есть push geteway, который позволяет собирать собирать метрики как Push, но потом сервер мониторинга забирает pull.
-        TICK - push ()
-        Zabbix
-        VictoriaMetrics
-        Nagios
+  Prometheus - Pull ( у него есть push geteway, который позволяет собирать собирать метрики как Push, но потом сервер мониторинга забирает как pull.  
+  TICK - push (Telegraf можно настроить для работы в  Pull)  
+  Zabbix - гибридная   
+  VictoriaMetrics - гибридная
+  Nagios -Pull
 
   #### 3.  Склонируйте себе репозиторий и запустите TICK-стэк, используя технологии docker и docker-compose.(по инструкции ./sandbox up )
 
@@ -34,8 +34,10 @@
 - curl http://localhost:8086/ping
 - curl http://localhost:8888
 - curl http://localhost:9092/kapacitor/v1/ping
+![image](https://user-images.githubusercontent.com/93119897/200283545-6e9bc151-e824-4898-a76c-b907999b9258.png)
 
 А также скриншот веб-интерфейса ПО chronograf (http://localhost:8888).
+![image](https://user-images.githubusercontent.com/93119897/200284444-9562a68b-cbf0-4ea1-96cc-2bae88895ab7.png)
 
 P.S.: если при запуске некоторые контейнеры будут падать с ошибкой - проставьте им режим Z, например ./data:/var/lib:Z
 
