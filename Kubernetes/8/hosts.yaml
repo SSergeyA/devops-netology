@@ -1,0 +1,36 @@
+all:
+  hosts:
+    master:
+      ansible_host: 84.201.142.191
+      ansible_user: sergey
+    node1:
+      ansible_host: 84.201.141.74  
+      ansible_user: sergey
+    node2:
+       ansible_host: 84.201.143.186  
+       ansible_user: sergey
+    node3:
+       ansible_host: 62.84.122.199  
+       ansible_user: sergey
+    node4:
+       ansible_host: 84.201.139.62  
+       ansible_user: sergey
+  children:
+    kube_control_plane:
+      hosts:
+        master:
+    kube_node:
+      hosts:
+        node1:
+        node2:
+        node3:
+        node4:
+    etcd:
+      hosts:
+        master:
+    k8s_cluster:
+      children:
+        kube_control_plane:
+        kube_node:
+    calico_rr:
+      hosts: {}
