@@ -20,7 +20,7 @@
     в поде подключена общая папка между контейнерами (например, /static);
     после записи чего-либо в контейнере с беком файлы можно получить из контейнера с фронтом.  
 
-[конфиг stage]()  
+[конфиг stage](https://github.com/SSergeyA/devops-netology/blob/main/Kubernetes/11/stage.yaml)  
 ![image](https://user-images.githubusercontent.com/93119897/204055895-272fa817-3242-4c3d-8510-52033634659f.png)
 
 ### Задание 2: подключить общую папку для прода
@@ -31,5 +31,5 @@
     фронтенды тоже подключаются к этому же PV с таким же режимом;
     файлы, созданные бекендом, должны быть доступны фронту.  
 
-[конфиг backend]()  
+[конфиг prod](https://github.com/SSergeyA/devops-netology/blob/main/Kubernetes/11/prod.yaml)  
 ![image](https://user-images.githubusercontent.com/93119897/204056036-c3768fe2-b6db-41b6-9994-9482f39be5d7.png)
