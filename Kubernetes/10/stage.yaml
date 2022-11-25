@@ -1,0 +1,117 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: stage
+  labels:
+    app: stage
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: stage
+  template:
+    metadata:
+      labels:
+        app: stage
+    spec:
+      containers:
+        - name: fronetend
+          image: ssergeya/frontend:1.0.1
+          ports:
+            - containerPort: 8000
+          env:
+            - name: BASE_URL
+              value: http://localhost:9000
+        - name: backend
+          image: ssergeya/backend:2.0.2
+          ports:
+          - containerPort: 9000
+          env:
+            - name: DATABASE_URL
+              value: postgres://postgres:postgres@db.default.svc.cluster.local:5432/news
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: db
+  labels:
+    app: db
+spec:
+  serviceName: "postgres"
+  replicas: 1
+  selector:
+    matchLabels:
+      app: db
+  template:
+    metadata:
+      labels:
+        app: db
+    spec:
+      containers:
+        - image: postgres:13-alpine
+          name: db
+          env:
+            - name: POSTGRES_DB
+              value: news
+            - name: POSTGRES_PASSWORD
+              value: postgres
+            - name: POSTGRES_USER
+              value: postgres
+            - name: PGDATA
+              value: /data/pgdata
+          ports:
+            - containerPort: 5432
+          volumeMounts:
+            - name: postgres-pv
+              mountPath: /data
+      volumes:
+      - name: postgres-pv
+        persistentVolumeClaim:
+          claimName: postgres-claim
+---
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: postgres-pv
+  labels:
+    type: local
+    app: db
+spec:
+  storageClassName: manual
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/mnt/data"
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: postgres-claim
+  labels:
+    app: db
+spec:
+  storageClassName: manual
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+  labels:
+    app: db
+  name: postgres
+spec:
+  ports:
+    - name: "postgres"
+      port: 5432
+      targetPort: 5432
+  selector:
+    app: db
+  type: ClusterIP
