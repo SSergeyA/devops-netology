@@ -83,7 +83,8 @@ person = 5
 мед, 250мл.  
 
 https://replit.com/join/zqwqdhlcij-ssergeya  
-![image](https://user-images.githubusercontent.com/93119897/206288323-3e0ba105-4625-4c09-b752-646439c3cf85.png)
+![image](https://user-images.githubusercontent.com/93119897/206289083-1f8a38db-f62b-4517-8047-2af8e2dfe65f.png)
+
 
 Внимание! Реализация не должна зависеть от количества блюд, их названий и количества ингредиентов в них!
 Задание №3
