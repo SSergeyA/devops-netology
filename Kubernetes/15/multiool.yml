@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: network-multitool
+  labels:
+    app: network-multitool
+spec:
+  selector:
+    matchLabels:
+      app: network-multitool
+  template:
+    metadata:
+      labels:
+        app: network-multitool
+    spec:
+      containers:
+      - name: network-multitool
+        image: praqma/network-multitool
+        env:
+         - name: HTTP_PORT
+           value: "1180"
+         - name: HTTPS_PORT
+           value: "11443"
+         - name: SECRET_USERNAME
+           valueFrom:
+             secretKeyRef:
+               name: my-secret
+               key: key1
+         - name: SECRET_PASSWORD
+           valueFrom:
+             secretKeyRef:
+               name: my-secret
+               key: key2
+        ports:
+         - containerPort: 1180
+           name: http-port
+         - containerPort: 11443
+           name: https-port
+        volumeMounts:
+            - name: supersecret
+              mountPath: /etc/secrets
+              readOnly: true
+      volumes:
+      - name: supersecret
+        secret:
+          secretName: my-secret2
+
