@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: multitool2
+  labels:
+    app: multitool
+spec:
+  selector:
+    matchLabels:
+      app: multitool
+  template:
+    metadata:
+      labels:
+        app: multitool
+    spec:
+      containers:
+      - name: multitool2
+        image: praqma/network-multitool
+        env:
+         - name: HTTP_PORT
+           value: "1180"
+         - name: HTTPS_PORT
+           value: "11443"
+        envFrom:
+          - configMapRef:
+              name: configm2
+        ports:
+         - containerPort: 1180
+           name: http-port
+         - containerPort: 11443
+           name: https-port
+        volumeMounts:
+            - name: config
+              mountPath: /etc/config2
+              readOnly: true
+      volumes:
+      - name: config
+        configMap:
+          name: configm2
+
