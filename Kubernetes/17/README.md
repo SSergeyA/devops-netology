@@ -44,6 +44,7 @@ kubectl apply -f nginx-config.yml
 ### Задача 2 (*): Работа с картами конфигураций внутри модуля
 
 Выбрать любимый образ контейнера, подключить карты конфигураций и проверить их доступность как в виде переменных окружения, так и в виде примонтированного тома  
-[образ]() [configmap]()  (Конфиг взял для примера из официальной доки по  kubernetes, чтоб посмотреть как отображаются различные записи переменных)  
+[образ](https://github.com/SSergeyA/devops-netology/blob/main/Kubernetes/17/multiool.yml)   
+[configmap](https://github.com/SSergeyA/devops-netology/blob/main/Kubernetes/17/configm2.yml)  (Конфиг взял для примера из официальной доки по  kubernetes, чтоб посмотреть как отображаются различные записи переменных)  
 ![image](https://user-images.githubusercontent.com/93119897/209850508-180d9a23-5844-44ef-86b7-ec0abb6eea74.png)
 
