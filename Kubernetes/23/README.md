@@ -25,8 +25,8 @@
     *Запустить микросервис phpmyadmin и подключиться к БД, созданной ранее
     *Создать сервис типы Load Balancer и подключиться к phpmyadmin. Предоставить скриншот с публичным адресом и подключением к БД   
     
- [Файл с манифестом для терраформа]()  
- [Файл c манифестом kubernetes]()  
+ [Файл с манифестом для терраформа](https://github.com/SSergeyA/devops-netology/blob/main/Kubernetes/23/main.tf)  
+ [Файл c манифестом kubernetes](https://github.com/SSergeyA/devops-netology/blob/main/Kubernetes/23/phpadm.yaml)  
  Создал кластера MySqL и kubernetes 
 ![image](https://user-images.githubusercontent.com/93119897/221963810-0ec1ec53-d2b8-40b8-858a-04ee9182d164.png)
  Сохранил локально конфиг для подключения к кластеру кубера  
