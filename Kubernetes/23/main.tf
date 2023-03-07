@@ -171,6 +171,12 @@ resource "yandex_resourcemanager_folder_iam_binding" "k8s-clusters-agent" {
     "serviceAccount:${yandex_iam_service_account.myaccount.id}"
   ]
 }
+# Назначение роли сервисному создания балансера
+resource "yandex_resourcemanager_folder_iam_member" "sa-lb" {
+  folder_id = var.YC_FOLDER_ID
+  role      = "load-balancer.admin"
+  member    = "serviceAccount:${yandex_iam_service_account.myaccount.id}"
+}
 
 resource "yandex_resourcemanager_folder_iam_binding" "vpc-public-admin" {
   # Сервисному аккаунту назначается роль "vpc.publicAdmin".
